@@ -1,15 +1,27 @@
 module.exports = function reverse (n) {
+    n = Math.abs(n);
+    n = n.toString();
+    let arr = n.split("");
+    let reverseString = "";
 
-    if (n === undefined) {
-        return 0;
+
+
+    for (let max = arr.length - 1; max >= 0; max--) {
+        reverseString += arr[max];
     }
 
+    return +reverseString;
 
-    n = n + "";
-    let array = [];
-    array  = n.split('').reverse().join('');
+    // if (n === undefined) {
+    //     return 0;
+    // }
 
-    return +array;
+
+    // n = n + "";
+    // let array = [];
+    // array  = n.split('').reverse().join('');
+
+    // return +array;
   
 }
 
